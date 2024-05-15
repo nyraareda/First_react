@@ -1,0 +1,17 @@
+img{
+    height:30rem;
+    /* width:2rem; */
+}
+.carousel-inner{
+    width: 50rem !important;
+    margin:auto;
+}
+.carousel-control-prev-icon:hover{
+    color: black;
+}
+.carousel-control-next-icon:hover{
+    color: black;
+}
+#carouselExample{
+    background-color: #ccc
+}
