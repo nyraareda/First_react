@@ -5,6 +5,9 @@ import { Slider } from './component/Slider';
 import { Header } from './component/Header';
 import {Products} from './component/Products';
 import Footer from './component/Footer';
+import { ProductForm } from './component/forms/ProductForm';
+import { ProductTable } from './component/forms/ProductTable';
+import { Product } from './component/forms/Product';
 
 
 function App() {
@@ -13,7 +16,9 @@ function App() {
     <MyNav/>
     <Slider/>
     <Header/>
-    <Products/>
+    <Product/>
+    {/* <Products/> */}
+
     <Footer/>
     </>
   );
