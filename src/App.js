@@ -5,21 +5,45 @@ import { Slider } from './component/Slider';
 import { Header } from './component/Header';
 import {Products} from './component/Products';
 import Footer from './component/Footer';
-import { ProductForm } from './component/forms/ProductForm';
+import { ProductForm } from './pages/ProductForm';
 import { ProductTable } from './component/forms/ProductTable';
 import { Product } from './component/forms/Product';
+import { Counter } from './component/Counter';
+import { Route, createBrowserRouter, createRoutesFromElements,RouterProvider } from 'react-router-dom';
+import { SharedLayout } from './layouts/sharedLayout';
+import { Aboutt } from "./pages/Aboutt";
+import { NotFound } from './pages/NotFound';
+import { ProductsDb } from './component/Day3/ProductsDb';
+import { ProductDetails } from './pages/ProductDetails';
 
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+    <Route path='/' element={<SharedLayout/>}>
+      <Route index element={<Products/>}/>
+      <Route path='about' element={<Aboutt/>}/>
+      <Route path='product' element={<ProductsDb/>}/>
+      <Route path='product/:id' element={<ProductDetails/>}/>
+      <Route path='product/:id/edit' element={<ProductForm/>}/>
+    </Route>
+    <Route path='*' element={<NotFound/>}></Route>
+    </>
+  )
+  )
   return (
     <>
-    <MyNav/>
+
+    <RouterProvider router={router}/>
+    {/* <MyNav/>
     <Slider/>
     <Header/>
+    <Counter/>
     <Product/>
-    {/* <Products/> */}
+    <Products/>
 
-    <Footer/>
+    <Footer/> */}
     </>
   );
 }
