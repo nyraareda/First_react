@@ -15,16 +15,23 @@ import { Aboutt } from "./pages/Aboutt";
 import { NotFound } from './pages/NotFound';
 import { ProductsDb } from './component/Day3/ProductsDb';
 import { ProductDetails } from './pages/ProductDetails';
+import { getAllProducts } from './api/productApi';
+import { ErrorComponent } from './component/Day3/ErrorComponent';
 
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-    <Route path='/' element={<SharedLayout/>}>
+    <Route path='/' element={<SharedLayout/>} 
+    loader={getAllProducts} id='sharedLayout' 
+    errorElement={<ErrorComponent/>}>
       <Route index element={<Products/>}/>
       <Route path='about' element={<Aboutt/>}/>
-      <Route path='product' element={<ProductsDb/>}/>
+      <Route path='product'
+      loader={getAllProducts}
+      element={<ProductsDb/>}
+      />
       <Route path='product/:id' element={<ProductDetails/>}/>
       <Route path='product/:id/edit' element={<ProductForm/>}/>
     </Route>
