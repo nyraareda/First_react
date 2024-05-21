@@ -3,7 +3,8 @@ import './App.css';
 import { MyNav } from './component/myNav';
 import { Slider } from './component/Slider';
 import { Header } from './component/Header';
-import {Products} from './component/Products';
+// import {Products} from './component/Products';
+import {Products} from './reduxToolKit/component/Products';
 import Footer from './component/Footer';
 import { ProductForm } from './pages/ProductForm';
 import { ProductTable } from './component/forms/ProductTable';
@@ -23,19 +24,16 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-    <Route path='/' element={<SharedLayout/>} 
-    loader={getAllProducts} id='sharedLayout' 
-    errorElement={<ErrorComponent/>}>
-      <Route index element={<Products/>}/>
-      <Route path='about' element={<Aboutt/>}/>
-      <Route path='product'
+    <Route path='/' element={<SharedLayout/>}>
+      <Route path='products'
+     errorElement={<ErrorComponent/>}
       loader={getAllProducts}
-      element={<ProductsDb/>}
-      />
-      <Route path='product/:id' element={<ProductDetails/>}/>
-      <Route path='product/:id/edit' element={<ProductForm/>}/>
+      element={<Products/>
+    }/>
+    <Route path='products/:id' element={<ProductDetails/>}/>
+    <Route path='products/:id/edit' element={<ProductForm/>}/>
+    <Route path='*' element={<NotFound/>}/>
     </Route>
-    <Route path='*' element={<NotFound/>}></Route>
     </>
   )
   )
@@ -56,3 +54,24 @@ function App() {
 }
 
 export default App;
+
+
+//<>
+    // <Route path='/' element={<SharedLayout/>} 
+    // loader={getAllProducts} id='sharedLayout' 
+    // errorElement={<ErrorComponent/>}>
+    //   <Route index element={<Products/>}/>
+    //   <Route path='about' element={<Aboutt/>}/>
+    //   <Route path='product'
+    //   loader={getAllProducts}
+    //   element={<ProductsDb/>}
+    //   />
+    //   <Route path='product/:id' element={<ProductDetails/>}/>
+    //   <Route path='product/:id/edit' element={<ProductForm/>}/>
+    // </Route>
+    // <Route path='productss'
+    //   loader={getAllProducts}
+    //   element={<Products/>}
+    //   />
+    // <Route path='*' element={<NotFound/>}></Route>
+    // </>

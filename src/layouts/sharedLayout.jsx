@@ -6,7 +6,7 @@ import { Header } from '../component/Header'
 import { Outlet, useRouteLoaderData } from 'react-router-dom'
 
 export const SharedLayout = () => {
-  const layoutData = useRouteLoaderData();
+  // const layoutData = useRouteLoaderData();
   // console.log(layoutData)
 
   
@@ -16,7 +16,8 @@ export const SharedLayout = () => {
     <MyNav/>
     <Slider/>
     <Header/>
-    <Outlet layoutData={layoutData}/>
+    <Outlet/>
+    {/* <Outlet layoutData={layoutData}/> */}
     <Footer/>
     </>
   )

@@ -7,7 +7,7 @@ import { ProductsTable } from './ProductsTable';
 
 export const ProductsDb = () => {
 
-  const baseUrl ='http://localhost:3005/products';
+
   const {data} = useLoaderData()
   console.log(data);
 
@@ -28,7 +28,7 @@ export const ProductsDb = () => {
 
     <div className='container'>
       {console.log("render products")}
-      <div><Link to="/product/0/edit">Add New Product</Link></div>
+      <div><Link className='btn btn-success mb-2' to="/product/0/edit">Add New Product</Link></div>
     {error ? (<h2 className='alert alert-danger text-center m-auto'>Can't load the products</h2>) : (<ProductsTable deleteHandle={deleteHandle} products={products}/>)}
     </div>
 

@@ -2,9 +2,9 @@ import React from 'react'
 import { Table } from 'react-bootstrap'
 export const ProductTable = ({products , setProduct}) => {
 
-    const handlerRemove = (id) => {
-        setProduct(products.filter(product => product.id !== id));
-      };
+    // const handlerRemove = (id) => {
+    //     setProduct(products.filter(product => product.id !== id));
+    //   };
 
   return (
     <> 
@@ -26,7 +26,7 @@ export const ProductTable = ({products , setProduct}) => {
                 <td>{product.name}</td>
                 <td>{product.price}</td>
                 <td>{product.shipping}</td>
-                <td><button onClick={() => handlerRemove(product.id)} className='btn btn-danger'>Remove</button></td>
+                {/* <td><button onClick={() => handlerRemove(product.id)} className='btn btn-danger'>Remove</button></td> */}
             </tr>
         )
       })}

@@ -14,7 +14,7 @@ export function MyNav() {
           <Nav className="ms-auto">
             <NavLink className={({isActive})=>{return isActive ? "text-success nav-link" : "nav-link"}} to="/">Home</NavLink>
             <NavLink className={({isActive})=>{return isActive ? "text-success nav-link" : "nav-link"}} to="/about">About</NavLink>
-            <NavLink className={({isActive})=>{return isActive ? "text-success nav-link" : "nav-link"}} to="/product">Products</NavLink>
+            <NavLink className={({isActive})=>{return isActive ? "text-success nav-link" : "nav-link"}} to="/products">Products</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

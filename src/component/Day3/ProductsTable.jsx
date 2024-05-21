@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
 export const ProductsTable = ({deleteHandle,products}) => {
+    
   return (
     <div><Table striped bordered hover>
         {console.log("render products table")}
@@ -21,13 +22,11 @@ return (
     <td>{product.name}</td>
     <td>{product.category}</td>
     <td>
-      <Link to={`/product/${product.id}`}>Show Product</Link>
-    </td>
-    <td>
-      <Link to={`/product/${product.id}/edit`}>Edit Product</Link>
-    </td>
-    <td>
-      <Link to='/product' onClick={()=>deleteHandle(product.id)} >Delete Product</Link>
+      <Link className='btn btn-primary' to={`/products/${product.id}`}>Show Product</Link>
+    
+      <Link className='btn btn-secondary mx-2' to={`/products/${product.id}/edit`}>Edit Product</Link>
+    
+      <Link className='btn btn-danger' to='/products' onClick={()=>deleteHandle(product.id)} >Delete Product</Link>
     </td>
   </tr>
 );
