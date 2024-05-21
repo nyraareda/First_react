@@ -10,7 +10,7 @@ import { myStore } from './reduxToolKit/redux';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <Provider store={myStore}>
-    <App />
+    <App id="background"/>
     </Provider>
 );
 

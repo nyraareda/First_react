@@ -3,3 +3,65 @@
     height:15rem;
     object-fit: cover;
 }
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); 
+  }
+  
+  .card:hover .card-body {
+    background-color: #f8f9fa;
+  }
+  
+  .card,
+  .card-body {
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease; 
+  }
+  /* Define custom styles for the table container */
+.table-container {
+    margin-top: 20px;
+  }
+  
+  /* Style the table */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .table thead th {
+    background-color: #714263;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #b43979 !important;
+  }
+  
+  .table td, .table th {
+    padding: 12px;
+  }
+  
+  .action-buttons .btn {
+    margin-right: 5px;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #dee2e6;
+  }
+  
+
+
+  .btn-danger {
+    background-color: #db2d81 !important;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #851d50 !important;
+    border-color: #bd2130;
+  }
+  

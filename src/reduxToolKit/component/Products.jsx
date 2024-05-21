@@ -6,7 +6,7 @@ import { deleteProduct, getAllProducts } from '../../api/productApi';
 import { ProductsTable } from '../../component/Day3/ProductsTable';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteAction, getAllActions } from '../redux/productSlice';
-
+import './prod.css'
 export const Products = () => {
 
         const {products,isLoading,error} = useSelector(state=>state.productSlice)
@@ -23,7 +23,7 @@ export const Products = () => {
 
   }
   return (
-
+<div>
     <div className='container'>
       {console.log("render products from with ToolKit")}
       <div><Link className='btn btn-success mb-2' to="/products/0/edit">Add New Product</Link></div>
@@ -31,6 +31,7 @@ export const Products = () => {
 
     {error ? <h2 className='alert alert-danger text-center m-auto'>Can't load the products</h2> : 
     <ProductsTable deleteHandle={deleteHandle} products={products}/>}
+    </div>
     </div>
 
   )

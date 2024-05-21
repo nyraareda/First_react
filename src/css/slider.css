@@ -13,5 +13,28 @@ img{
     color: black;
 }
 #carouselExample{
-    background-color: #ccc
+    background-color: #cec19e67
 }
+
+.carousel-inner {
+    width: 50rem !important;
+    margin: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    color: black;
+  }
+  
+  #carouselExample {
+    background-color: #cec19e67;
+  }
+.carousel-item img {
+    transition: transform 0.3s ease;
+  } 
+  
+  .carousel-item:hover img {
+    transform: scale(1.1); 
+  }
+  

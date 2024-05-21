@@ -32,20 +32,22 @@ const products = [
   }
 ];
 
-export function Products() {
+export function ProductsCard() {
   return (
+    <div>
     <div className="container">
-      <div className="row" style={{ display: 'flex', flexWrap: 'nowrap' }}>
-        {products.map((product, index) => (
-          <ProductItem
-            key={index}
-            img={product.img}
-            title={product.title}
-            price={product.price}
-            quantity={product.quantity}
-          />
-        ))}
-      </div>
+    <div className="row">
+      {products.map((product, index) => (
+        <ProductItem
+          key={index}
+          img={product.img}
+          title={product.title}
+          price={product.price}
+          quantity={product.quantity}
+        />
+      ))}
     </div>
+  </div>
+  </div>
   );
 }

@@ -1,0 +1,10 @@
+.btn-success {
+    background-color: #ae397273 !important;
+    border: none !important;
+  }
+
+  .btn-success:hover {
+    background-color: #ae3972ba !important;
+    border-color: #db2d8100;
+    border: none !important;
+  }

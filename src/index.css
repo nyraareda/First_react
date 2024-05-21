@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#background {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Adjust the height as necessary */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+#background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://img.freepik.com/free-photo/top-view-cups-coffee-table_23-2148900647.jpg?t=st=1716278965~exp=1716282565~hmac=9b46684adb7d961fc572227d937c04b91f4abe76714c3330720dff6c762ff6e4&w=1060');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); /* Adjust the blur level as necessary */
+  z-index: -1; /* Ensure it stays behind the content */
+}

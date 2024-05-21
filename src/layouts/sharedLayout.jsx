@@ -19,6 +19,7 @@ export const SharedLayout = () => {
     <Outlet/>
     {/* <Outlet layoutData={layoutData}/> */}
     <Footer/>
+    
     </>
   )
 }

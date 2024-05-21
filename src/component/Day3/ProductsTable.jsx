@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Table } from 'react-bootstrap';
+import '../../css/products.css'
 export const ProductsTable = ({deleteHandle,products}) => {
     
   return (
